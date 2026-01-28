@@ -1,0 +1,3 @@
+SOFTINCLUDE /home/install/IC618/share/cdssetup/cds.lib
+DEFINE BGR_Test /home/nieece/Dhruthi/BGR_Test
+DEFINE Diff_amp /home/nieece/Dhruthi/Diff_amp
