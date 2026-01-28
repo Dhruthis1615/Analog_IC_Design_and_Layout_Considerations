@@ -93,7 +93,7 @@ The `BGR_Test_Analysis_images/` folder includes:
 - Comparision of the dc and transient analysis
 
 ### Cadence Files
-The `BGR_Test_Cadence_simulation/' folder contains:
+The `BGR_Test_Cadence_simulation/` folder contains:
 - Cadence Virtuoso project files used for BGR design and simulation
 
 ---
