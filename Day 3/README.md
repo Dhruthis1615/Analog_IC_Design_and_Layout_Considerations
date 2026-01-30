@@ -116,7 +116,7 @@ This SRAM project demonstrates:
 ### Plots Included
 - SRAM schematic  
 - Butterfly curve  
-- DC transfer characteristics  
+
 
 
 
