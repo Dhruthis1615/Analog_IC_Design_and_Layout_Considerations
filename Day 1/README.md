@@ -35,6 +35,7 @@ Proper biasing ensures operation in the desired region, especially saturation.
 
 ### Circuit Implementation
 A Bandgap Reference (BGR) circuit was implemented to understand reference voltage generation and bias stability. The schematic was designed and verified using Cadence Virtuoso.
+![Schematic of a BGR Circuit](./BGR_Test_Analysis_images/BGR_Schematic.png)
 
 ---
 
@@ -46,7 +47,8 @@ DC analysis was used to:
 - Ensure proper biasing of transistors
 - Confirm correct regions of operation
 - Validate node voltages and branch currents
-
+![DC Analysis of a BGR Circuit](./BGR_Test_Analysis_images/BGR_DC-Analysis.png)
+![DC Analysis of a BGR Circuit](./BGR_Test_Analysis_images/BGR_DC-Analysis1.png)
 ---
 
 ### 2. Region of Operation Study
@@ -54,17 +56,26 @@ Bias voltages were varied to analyze MOSFET operation under different conditions
 - Cutoff region
 - Saturation region at multiple bias voltages
 
+![Region of operation](./BGR_Test_Analysis_images/BGR_CutoffRegion-100m.png)
+This region shows the cutoff region
+
+![Region of operation](./BGR_Test_Analysis_images/BGR_SaturationRegion-900m.png)
+This region shows the saturation region at 900m.
+
+![Region of operation](./BGR_Test_Analysis_images/BGR_SaturationRegion-600m.png)
+This region shows the saturation region at 600m.
 This study reinforced the relationship between biasing and transistor behavior.
 
 ---
 
 ### 3. Transient Analysis
 Transient analysis was performed to observe:
+![Transient analysis](./BGR_Test_Analysis_images/BGR_Transient-Analysis.png)
 - Startup behavior of the BGR circuit
 - Time-domain response
 - Settling characteristics
 - Comparison between transient response and DC operating point
-
+![Transient analysis](./BGR_Test_Analysis_images/BGR_Transient-vs-DC-Analysis.png)
 ---
 
 ### 4. AC Analysis
@@ -72,12 +83,13 @@ AC analysis was carried out to study:
 - Small-signal behavior of the BGR circuit
 - Frequency response characteristics
 - Gain behavior around the operating point
-
+![AC analysis](./BGR_Test_Analysis_images/BGR_AC-Analysis.png)
 ---
 
 ### 5. Parametric Analysis
 Parametric analysis was used to observe the effect of varying parameters on circuit performance. This helped in understanding sensitivity and robustness of the BGR design.
-
+![Parametric Analysis](./BGR_Test_Analysis_images/BGR_Parametric-Analysis.png)
+ 
 ---
 
 ## Files Included
