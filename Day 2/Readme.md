@@ -101,19 +101,19 @@ Observed time-domain amplification and signal behavior.
 
 ### 📌 Differential Amplifier Schematic
 
-![Diff Amp Schematic](Day%202/Diffrential_Amplifier/Images-Diffrential_Amplifier/DiffAmp_Schematic.png)
+![Diff Amp Schematic](Images-Diffrential_Amplifier/DiffAmp_Schematic.png)
 
 ---
 
 ### 📌 Alternate Schematic View
 
-![Diff Amp Schematic Alt](Day%202/Differential_Amplifier/Images-Differential_Amplifier/DiffAmp_Schematic1.png)
+![Diff Amp Schematic Alt](Images-Differential_Amplifier/DiffAmp_Schematic1.png)
 
 ---
 
 ### 📊 Differential Output Response
 
-![Diff Amp Output](Day%202/Differential_Amplifier/Images-Differential_Amplifier/DiffAmp_Output.png)
+![Diff Amp Output](Images-Differential_Amplifier/DiffAmp_Output.png)
 
 ---
 
