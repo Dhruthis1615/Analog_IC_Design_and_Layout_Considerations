@@ -30,7 +30,7 @@ Studied the **physical structure of NMOS and PMOS devices** and major CMOS fabri
 ![Layers](Images/Layers.png)
 
 ### Full Layer Stack View  
-![Layout All Layers](Day%204%20%26%205/Images/Layout_All%20layers.png)
+![Layout All Layers](Images/Layout_All%20layers.png)
 
 **Key Insight:**  
 Understanding how fabrication maps to layout layers improves **design realism and accuracy**.
@@ -67,10 +67,10 @@ Learned best practices for **analog-optimized floorplanning**:
 - Organized device grouping  
 
 ### Grouping Strategy  
-![Grouping](Day%204%20%26%205/Images/grouping.png)
+![Grouping](Images/grouping.png)
 
 ### Grouping with Dummy Devices  
-![Grouping and Dummies](Day%204%20%26%205/Images/Grouping%20and%20dummies.png)
+![Grouping and Dummies](Images/Grouping%20and%20dummies.png)
 
 ---
 
@@ -86,7 +86,7 @@ Focused on **high-precision analog layout methods**:
 - Symmetric routing paths  
 
 ### Alignment for Matching  
-![Aligning](Day%204%20%26%205/Images/Aligning.png)
+![Aligning](Images/Aligning.png)
 
 **Why Matching Matters:**  
 Mismatch impacts:
@@ -114,7 +114,7 @@ Mismatch impacts:
 ## 6. Hands-On Project — Differential Amplifier Design  
 
 ### Differential Amplifier Schematic  
-![DiffAmp Schematic](Day%204%20%26%205/Images/DiffAmp_Schematic.png)
+![DiffAmp Schematic](Images/DiffAmp_Schematic.png)
 
 ---
 
@@ -146,7 +146,7 @@ Where:
 - Ensure clean and balanced routing  
 
 ### Differential Amplifier Layout  
-![DiffAmp Layout](Day%204%20%26%205/Images/DiffAmp_Layout.png)
+![DiffAmp Layout](Images/DiffAmp_Layout.png)
 
 ---
 
@@ -154,20 +154,20 @@ Where:
 
 Guard rings were used to **reduce substrate noise coupling** and improve **analog signal integrity**.
 
-![Guard Ring Integration](Day%204%20%26%205/Images/Gaurd%20Ring%20integration.png)
+![Guard Ring Integration](Images/Gaurd%20Ring%20integration.png)
 
 ---
 
 ## 9. Routing Strategy & Parasitic Minimization  
 
 ### DRC Before Routing  
-![DRC Before Routing](Day%204%20%26%205/Images/DRC_before_routing.png)
+![DRC Before Routing](Images/DRC_before_routing.png)
 
 ### Oxide & Layer Planning  
-![Oxide Layer](Day%204%20%26%205/Images/Layout_oxide%20layer.png)
+![Oxide Layer](Images/Layout_oxide%20layer.png)
 
 ### Post-Routing DRC Clean Layout  
-![Layout DRC](Day%204%20%26%205/Images/Layout_DRC.png)
+![Layout DRC](Images/Layout_DRC.png)
 
 **Key Insight:**  
 > Poor routing increases **capacitance, resistance, noise, and gain degradation**.
