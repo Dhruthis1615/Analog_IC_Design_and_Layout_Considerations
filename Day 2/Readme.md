@@ -101,7 +101,7 @@ Observed time-domain amplification and signal behavior.
 
 ### 📌 Differential Amplifier Schematic
 
-![Diff Amp Schematic](Day 2/Diffrential_Amplifier/Images-Diffrential_Amplifier/DiffAmp_Schematic.png)
+![Diff Amp Schematic](Day%202/Diffrential_Amplifier/Images-Diffrential_Amplifier/DiffAmp_Schematic.png)
 
 ---
 
