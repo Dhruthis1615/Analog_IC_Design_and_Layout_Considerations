@@ -27,7 +27,7 @@ Studied the **physical structure of NMOS and PMOS devices** and major CMOS fabri
 - Passivation & packaging  
 
 ### Layout Layer Understanding  
-![Layers](Day%204%20%26%205/Images/Layers.png)
+![Layers](Images/Layers.png)
 
 ### Full Layer Stack View  
 ![Layout All Layers](Day%204%20%26%205/Images/Layout_All%20layers.png)
