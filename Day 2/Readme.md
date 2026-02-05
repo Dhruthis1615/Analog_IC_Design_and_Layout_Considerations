@@ -95,25 +95,25 @@ Observed time-domain amplification and signal behavior.
 
 ---
 
-## 🔹 Part 2 — Differential Amplifier Design / Operation Transconductance Amplifier (OTA)
+## 🔹 Part 2 — Differential Amplifier Design / Operational Transconductance Amplifier (OTA)
 
 ---
 
 ### 📌 Differential Amplifier Schematic
 
-![Diff Amp Schematic](Differential_Amplifier/Images-Differential_Amplifier/DiffAmp_Schematic.png)
+![Differential Amplifier Schematic](Day%202/Differential_Amplifier/Images-Differential_Amplifier/DiffAmp_Schematic.png)
 
 ---
 
 ### 📌 Alternate Schematic View
 
-![Diff Amp Schematic 2](Differential_Amplifier/Images-Differential_Amplifier/DiffAmp_Schematic1.png)
+![Alternate Diff Amp Schematic](Day%202/Differential_Amplifier/Images-Differential_Amplifier/DiffAmp_Schematic1.png)
 
 ---
 
 ### 📊 Differential Output Response
 
-![Diff Amp Output](Differential_Amplifier/Images-Differential_Amplifier/DiffAmp_Output.png)
+![Differential Output Response](Day%202/Differential_Amplifier/Images-Differential_Amplifier/DiffAmp_Output.png)
 
 ---
 
