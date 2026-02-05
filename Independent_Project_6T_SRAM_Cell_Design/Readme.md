@@ -29,7 +29,7 @@ The feedback loop formed by the inverters allows the SRAM cell to **retain store
 
 ## 📷 6T SRAM Schematic  
 
-![6T SRAM Schematic](Independent_Project_6T_SRAM_Cell_Design/Images-6T_SRAM/6T_SRAM_Schematic.png)
+![6T SRAM Schematic](Images-6T_SRAM/6T_SRAM_Schematic.png)
 
 ---
 
@@ -58,7 +58,7 @@ Static Noise Margin (SNM) evaluates **cell stability and robustness** against no
 
 ### 📷 Butterfly Curve for SNM  
 
-![SNM Butterfly Curve](Independent_Project_6T_SRAM_Cell_Design/Images-6T_SRAM/6T_SRAM_ButterflyCurve.png)
+![SNM Butterfly Curve](Images-6T_SRAM/6T_SRAM_ButterflyCurve.png)
 
 ### 📐 Observations  
 - Larger SNM indicates **higher stability**  
