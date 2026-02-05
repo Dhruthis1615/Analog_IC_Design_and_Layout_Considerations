@@ -1,123 +1,71 @@
-# Day 3 — Bandgap Reference (BGR) & 6T SRAM Design and Analysis
+# 📘 Day 3 — Bandgap Reference (BGR) Design & Analysis  
+**Cadence Virtuoso | Analog IC Design & Temperature Compensation**
 
-This day focused on **Bandgap Reference (BGR) circuit design**, **temperature compensation analysis**, and continued work on a **6T SRAM memory cell** using Cadence Virtuoso. The goal was to understand **temperature-stable voltage generation**, **noise behavior**, and **memory stability**.
+Day 3 focused on the **design, simulation, and validation of a Bandgap Reference (BGR) circuit**, emphasizing **temperature compensation**, **PTAT & CTAT voltage generation**, **reference voltage stabilization**, and **noise spectrum analysis**. The objective was to understand how **temperature-independent reference voltages** are created in real-world analog IC systems.
 
----
+The first phase of work involved studying **PTAT (Proportional To Absolute Temperature)** and **CTAT (Complementary To Absolute Temperature)** behavior using a **BJT-based core**. A **CTAT voltage** was generated using **VBE**, which decreases as temperature increases. A **PTAT voltage** was generated using **ΔVBE**, which increases with temperature. Temperature sweep simulations were performed to verify these opposite slopes, confirming the foundation of **temperature compensation in bandgap circuits**.
 
-## 1️⃣ Bandgap Reference (BGR) — Core PTAT & CTAT Analysis
+The following schematic and plots illustrate the PTAT & CTAT behavior:
 
-### Objective
-To study **PTAT (Proportional To Absolute Temperature)** and **CTAT (Complementary To Absolute Temperature)** voltage behavior and understand how temperature compensation is achieved in bandgap references.
+**BGR Core Schematic**  
+![BGR Schematic](Images-BGR_Analysis/BGR_circuit/BGR_Schematic.jpg)
 
----
+**PTAT vs CTAT Comparison**  
+![PTAT vs CTAT](Images-BGR_Analysis/BGR_circuit/PTATvsCTAT.png)
 
-### Work Done
-- Generated **CTAT voltage** using BJT **VBE**
-- Generated **PTAT voltage** using **ΔVBE**
-- Performed **temperature sweep analysis**
-- Extracted and compared **PTAT and CTAT slopes**
-- Verified complementary temperature trends
+**Slope Comparison (PTAT vs CTAT)**  
+![Slope PTAT vs CTAT](Images-BGR_Analysis/BGR_circuit/Slope_PTATvsCTAT.png)
 
----
+**VBE CTAT Temperature Sweep**  
+![VBE CTAT Sweep](Images-BGR_Analysis/BGR_circuit/VBE_CTAT_Temp_Sweep_Analysis.png)
 
-### Key Observations
-- **CTAT (VBE)** decreases with increasing temperature  
-- **PTAT (ΔVBE)** increases with increasing temperature  
-- Slope comparison confirms the basis for **temperature compensation**
+The second phase focused on implementing a **complete Op-Amp Based Bandgap Reference**, where **PTAT and CTAT voltages were combined using resistor scaling** in a **feedback-stabilized architecture**. The objective was to generate a **temperature-stable reference voltage (VREF ≈ 1.2V)**. The op-amp ensures accurate summation and maintains stability across temperature variations.
 
----
+The bandgap reference voltage follows the equation:
 
-### Plots Included
-- VBE vs Temperature (CTAT behavior)
-- PTAT vs CTAT comparison
-- PTAT & CTAT slope analysis
+\[
+V_{REF} = V_{BE} + k \cdot \Delta V_{BE}
+\]
 
----
+Where:  
+- \( V_{BE} \) is the CTAT component  
+- \( \Delta V_{BE} \) is the PTAT component  
+- \( k \) is set by resistor ratios  
 
-## 2️⃣ Op-Amp Based Bandgap Reference (Final BGR Circuit)
+**Op-Amp Based BGR Schematic**  
+![OpAmp BGR](Images-BGR_Analysis/OpAmp_BGR_Circuit/OpAmp_based_BGR_Schematic.png)
 
-### Objective
-To combine PTAT and CTAT components using an **op-amp feedback loop** to generate a **temperature-stable reference voltage (VREF)**.
+**VREF Generation Output Plot**  
+![VREF Output](Images-BGR_Analysis/BGR_circuit/BGR_Generation_VREF.png)
 
----
+To evaluate real-world signal quality, **noise spectrum analysis** was performed on the BGR output. The analysis focused on three key frequency-domain performance metrics:
 
-### Work Done
-- Implemented **Op-Amp Based BGR Architecture**
-- Combined PTAT and CTAT through resistor network
-- Generated **VREF ≈ constant over temperature**
-- Verified bias stability and feedback operation
+- **SNR (Signal-to-Noise Ratio)** — Measures signal clarity  
+- **SFDR (Spurious-Free Dynamic Range)** — Measures spectral purity  
+- **THD (Total Harmonic Distortion)** — Measures harmonic distortion  
 
----
+Two input amplitude conditions were tested to observe distortion and linearity trends.
 
-### Noise Spectrum Analysis
-Frequency-domain performance was evaluated using:
-- **SNR (Signal-to-Noise Ratio)** — Measures signal clarity
-- **SFDR (Spurious-Free Dynamic Range)** — Measures spectral purity
-- **THD (Total Harmonic Distortion)** — Measures harmonic distortion
+**Noise Spectrum — 50 mV Input**  
+![Noise Spectrum 50mV](Images-BGR_Analysis/OpAmp_BGR_Circuit/Noise_Spectrum_50mV.png)
 
----
+**Noise Spectrum — 0.5 V Input**  
+![Noise Spectrum 0.5V](Images-BGR_Analysis/OpAmp_BGR_Circuit/Noise_spectrum_0.5v.png)
 
-### Observations
-- Lower input amplitude → Better linearity and spectral purity  
-- Higher input amplitude → Increased harmonic distortion and THD  
-- Noise spectrum validates **reference voltage signal quality**
+The results showed that **lower input amplitudes produced cleaner spectral outputs with lower harmonic distortion**, while **higher amplitudes increased THD and spurious tones**. This validated the **robustness and signal integrity of the BGR output**.
 
----
+### Key Learnings from Day 3  
+- Practical understanding of **PTAT and CTAT voltage generation**  
+- How **ΔVBE enables temperature compensation**  
+- Real-world implementation of a **Bandgap Reference circuit**  
+- Generating a **temperature-stable VREF** using resistor scaling and op-amp feedback  
+- Performing **noise spectrum analysis using SNR, SFDR, and THD**  
+- Hands-on experience with **Cadence Virtuoso simulation, debugging, and validation**  
 
-### Plots Included
-- Op-Amp Based BGR Schematic
-- Noise Spectrum (50 mV input)
-- Noise Spectrum (0.5 V input)
-- VREF generation plot
+### Tools Used  
+- Cadence Virtuoso  
+- Spectre Simulator  
+- Analog Design Environment (ADE)
 
----
-
-## 3️⃣ 6T SRAM Cell — Independent Project (Stability & Butterfly Curve Analysis)
-
-### Objective
-To independently design and analyze a **6-Transistor (6T) SRAM memory cell**, focusing on **data stability, noise tolerance, and realistic memory behavior**.  
-This project was completed **entirely without external help**, demonstrating **strong problem-solving ability, circuit intuition, and core VLSI design skills**.
-
----
-
-### Work Done
-- Designed the **6T SRAM schematic independently from scratch**
-- Implemented **cross-coupled inverter-based storage nodes**
-- Created the **full memory cell architecture (pull-up, pull-down, access transistors)**
-- Performed **DC sweep analysis** to study cell behavior
-- Generated the **Butterfly Curve** to evaluate memory stability
-- Verified **bistable storage states** (logic ‘0’ and logic ‘1’)
-- Analyzed **cell robustness under device sizing constraints**
-- Debugged and validated correct **data retention and switching behavior**
-
----
-
-### Key Concept — Static Noise Margin (SNM)
-SNM represents the **maximum noise voltage the SRAM cell can tolerate without flipping stored data**.
-
-- Larger butterfly square → **Higher stability and stronger data retention**
-- Smaller butterfly square → **Higher sensitivity to noise and mismatch**
-
-This metric is critical in **commercial memory and cache design**.
-
----
-
-### Why This Project
-This SRAM project demonstrates:
-- Ability to **design a complete memory sub-block independently**
-- Practical understanding of **memory architecture and stability challenges**
-- Experience with **industry-relevant SNM and butterfly curve analysis**
-- Strong **debugging, transistor sizing, and validation skills**
-- Confidence in handling **complex nanoscale CMOS circuits**
-- Readiness for **VLSI, Memory Design, and Analog IC roles**
-
----
-
-### Plots Included
-- SRAM schematic  
-- Butterfly curve  
-
-
-
-
-
+### Summary  
+Day 3 strengthened practical knowledge in **Analog IC Reference Design**, **Temperature Compensation Techniques**, and **Noise Performance Evaluation**, providing hands-on experience in designing a **production-relevant Bandgap Reference circuit** used in power management, ADCs, DACs, and precision analog systems.
